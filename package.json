@@ -1,0 +1,27 @@
+{
+    "name": "mon-site-vitrine",
+    "version": "1.0.0",
+    "description": "",
+    "main": "index.js",
+    "directories": {
+        "test": "test"
+    },
+    "scripts": {
+        "test": "jest"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/jpfaobe1234/First_CICD.git"
+    },
+    "keywords": [],
+    "author": "",
+    "license": "ISC",
+    "bugs": {
+        "url": "https://github.com/jpfaobe1234/First_CICD/issues"
+    },
+    "homepage": "https://github.com/jpfaobe1234/First_CICD#readme",
+    "devDependencies": {
+        "jest": "^30.3.0",
+        "prettier": "^3.8.1"
+    }
+}

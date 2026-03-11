@@ -13,21 +13,28 @@ jobs:
             - name: Recuperer le code et puis le deposer dans le Virtual lunix
               uses: actions/checkout@v4
 
-            # --- Section CI ---
             - name: Installer Node.js
               uses: actions/setup-node@v4
               with:
                   node-version: 18
+
+            # --- Section CI ---
+            - name: Installer les dépendances
+              run: npm install
 
             - name: Verifier le formatage (Prettier)
               run: |
                   npm install -g prettier
                   npx prettier --check .
 
+            - name: lancer les tests unitaires
+              run: npm test
+
             #------------------------------
 
             # --- Section Deployement ----
             - name: Envoyer en ligne (preparer la version web)
+              if: success()
               uses: JamesIves/github-pages-deploy-action@v4 #On utilise un outil tout fait (créé par James Ives) pour gérer le déploiement
               with:
                   folder: . #On indique au robot que les fichiers à publier sont à la racine
