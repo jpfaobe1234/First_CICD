@@ -1,1 +1,1 @@
-console.log("Pipeline CI/CD opérationnel !");
+console.log('Pipeline CI/CD opérationnel !');
