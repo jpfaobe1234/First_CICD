@@ -9,7 +9,7 @@ permissions:
 jobs:
   deploy:
     runs-on: ubuntu-latest
-    stepes: 
+    steps: 
       - name: 1. Recuperer le code et puis le deposer dans le Virtual lunix
       uses: actions/checkout@v4
 
