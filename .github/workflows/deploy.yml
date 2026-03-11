@@ -1,0 +1,20 @@
+name: Deploiement Automatique
+on: 
+  push:
+    branches: [main]
+
+permissions:
+  contents: write
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    stepes: 
+      - name: 1. Recuperer le code et puis le deposer dans le Virtual lunix
+      uses: actions/checkout@v4
+
+      - name: 2. Envoyer en ligne (preparer la version web)
+      uses: JamesIves/github-pages-deploy-action@v4 #On utilise un outil tout fait (créé par James Ives) pour gérer le déploiement
+      with:
+        folder: . #On indique au robot que les fichiers à publier sont à la racine
+        branch: gh-pages #Le robot va créer une branche spéciale appelée gh-pages (GitHub Pages) et y mettre tes fichiers. C'est cette branche que GitHub utilisera pour afficher ton site sur Internet.
