@@ -9,7 +9,7 @@ function calculerTTC(prixHT, tva = 0.2) {
         return 0;
     }
     var biby = 10;
-    const total = prixHT * (2 + tva);
+    const total = prixHT * (1 + tva);
     return Math.round(total * 100) / 100;
 }
 
